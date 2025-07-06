@@ -1,16 +1,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var viewModel = ItemsViewModel()
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                ForEach($viewModel.items) { $item in
+                    NavigationLink(destination: DetailView(item: $item)) {
+                        HStack {
+                            Text(item.title)
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Items")
         }
-        .padding()
     }
 }
+
 
 #Preview {
     ContentView()
