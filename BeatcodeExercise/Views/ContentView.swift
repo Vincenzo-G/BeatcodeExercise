@@ -10,9 +10,12 @@ struct ContentView: View {
                     NavigationLink(destination: DetailView(item: $item)) {
                         HStack {
                             Text(item.title)
+                                .accessibilityLabel("Item title: \(item.title)")
                             Spacer()
                             FavoriteButton(isFavorite: $item.isFavorite)
+                                .accessibilityLabel(item.isFavorite ? "Remove from favorites" : "Mark as favorite")
                         }
+                        .accessibilityElement(children: .combine)
                     }
                 }
             }

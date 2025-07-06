@@ -8,7 +8,8 @@ struct DetailView: View {
             Text(item.title)
                 .font(.largeTitle)
             FavoriteButton(isFavorite: $item.isFavorite)
-                .font(.system(size: 40))
+                .font(.largeTitle)
+                .accessibilityLabel(item.isFavorite ? "Remove from favorites" : "Mark as favorite")
             Spacer()
             
         }
