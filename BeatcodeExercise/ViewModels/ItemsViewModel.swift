@@ -3,16 +3,16 @@ import SwiftUI
 @Observable
 class ItemsViewModel {
     var items: [Item] = [
-        Item(title: "Cell number 1", isFavorite: false),
-        Item(title: "Cell number 2", isFavorite: false),
-        Item(title: "Cell number 3", isFavorite: false),
-        Item(title: "Cell number 4", isFavorite: false),
-        Item(title: "Cell number 5", isFavorite: false),
-        Item(title: "Cell number 6", isFavorite: false),
-        Item(title: "Cell number 7", isFavorite: false),
-        Item(title: "Cell number 8", isFavorite: false),
-        Item(title: "Cell number 9", isFavorite: false),
-        Item(title: "Cell number 10", isFavorite: false)
+        Item(title: "Vincenzo Gerelli", isFavorite: false),
+        Item(title: "Emanuele Agosta", isFavorite: false),
+        Item(title: "Pasquale Vittoriosi", isFavorite: false),
+        Item(title: "Adrian Faz", isFavorite: false),
+        Item(title: "Giovanni Lo Monaco", isFavorite: false),
+        Item(title: "Flora Amato", isFavorite: false),
+        Item(title: "Umberto Ciavattone", isFavorite: false),
+        Item(title: "Ester Sgambato", isFavorite: false),
+        Item(title: "Giusy Di Paola", isFavorite: false),
+        Item(title: "Tiago Pereira", isFavorite: false)
     ]
 
     func toggleFavorite(for item: Item) {
